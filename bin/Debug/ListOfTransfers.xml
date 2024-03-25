@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Transfers>
+  <Account>
+    <ID />
+    <Date />
+    <CustomerID>2</CustomerID>
+    <AccountID>3</AccountID>
+    <Number>4607 8375 2751 8514</Number>
+    <AccountGetID>3</AccountGetID>
+    <NumberGet>4607 8375 2751 8514</NumberGet>
+    <Type>1</Type>
+    <Amount>400</Amount>
+  </Account>
+</Transfers>

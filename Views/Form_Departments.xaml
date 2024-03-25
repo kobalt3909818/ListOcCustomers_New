@@ -1,0 +1,41 @@
+﻿<Window x:Class="ListOfCustomers_New.Views.Form_Departments"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListOfCustomers_New.Views"
+        mc:Ignorable="d"
+        Title="Form_Departments" Height="450" Width="800" Background="#FFB8E7F9"
+         Name="DepartmentsWindow">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="645*"/>
+            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="373*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="List_Departments" AutoGenerateColumns="False" ItemsSource="{Binding ListDepartments}" Margin="25,10,1,25" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn  Header="ID" Binding="{Binding ID}" Width="40"/>
+                <DataGridTextColumn  Header="Name" Binding="{Binding Name}" Width="300"/>
+                <DataGridTemplateColumn Header="Actions">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Button  Command="{Binding DataContext.EditDepartmentsCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}" 
+                                 Content="Edit" Margin="5" Width="50" Height="20" CommandParameter="{Binding}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button_Add" CommandParameter="{x:Reference Name= DepartmentsWindow}" Command="{Binding AddDepartmentsCommand}" Content=" + Add" Grid.Column="2" Margin="0,0,10,10" HorizontalAlignment="Right" Width="83" Height="20" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

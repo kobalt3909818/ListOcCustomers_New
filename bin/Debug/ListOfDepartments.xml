@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Departments>
+  <Department>
+    <ID>1</ID>
+    <Name>Подразделение 1</Name>
+  </Department>
+  <Department>
+    <ID>2</ID>
+    <Name>Подразделение 2</Name>
+  </Department>
+  <Department>
+    <ID>3</ID>
+    <Name>Подразделение 3</Name>
+  </Department>
+  <Department>
+    <ID>4</ID>
+    <Name>Подразделение 4</Name>
+  </Department>
+  <Department>
+    <ID>5</ID>
+    <Name>Подразделение 6</Name>
+  </Department>
+  <Department>
+    <ID>6</ID>
+    <Name>Подразделение 7</Name>
+  </Department>
+  <Department>
+    <ID>7</ID>
+    <Name>Подразделение 9</Name>
+  </Department>
+  <Department>
+    <ID>8</ID>
+    <Name>IT Подразделение</Name>
+  </Department>
+</Departments>

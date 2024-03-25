@@ -1,0 +1,55 @@
+﻿<Window x:Class="ListOfCustomers_New.Views.Form_EditCustomers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListOfCustomers_New.Views"
+        mc:Ignorable="d"
+    Title="Form_EditCustomers" Height="320" Width="420.227" Background="#FFB8E7F9"
+        Name="EditCustomersWindow">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="224*"/>
+            <RowDefinition Height="65*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="405*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Save" CommandParameter="{x:Reference Name=EditCustomersWindow}" Command="{Binding SaveCustomersCommand}" Content="Save" Margin="273,0,0,22" Width="116" Grid.Row="1" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        <TextBox x:Name="First_Name" Text="{Binding First_Name}" Height="23" Margin="134,44,7,0" TextWrapping="Wrap"  VerticalAlignment="Top" />
+        <TextBox x:Name="Second_Name" Text="{Binding Second_Name}" Height="23" Margin="134,72,7,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+        <TextBox x:Name="Middle_Name" Text="{Binding Middle_Name}" Height="23" Margin="134,100,7,0" TextWrapping="Wrap"  VerticalAlignment="Top" />
+        <ComboBox x:Name="Departments" SelectedItem="{Binding SelectedDepartment}"  ItemsSource="{Binding ListOfDepartments}" Margin="134,128,7,0" VerticalAlignment="Top" Height="23">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding ID}"/>
+                        <TextBlock Text="-->"/>
+                        <TextBlock Text="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBox x:Name="Telephone" Text="{Binding Telephone}" Height="23" Margin="134,157,5,0" TextWrapping="Wrap"  VerticalAlignment="Top" />
+        <TextBox x:Name="Pasport" Text="{Binding Pasport}" Height="23" Margin="134,185,5,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <Label x:Name="label_FirstName" Content="First name:" HorizontalAlignment="Left" Height="30" Margin="34,40,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label x:Name="label_SecondName" Content="Second name:" HorizontalAlignment="Left" Height="30" Margin="13,67,0,0" VerticalAlignment="Top" Width="119"/>
+        <Label x:Name="label_MiddleName" Content="Middle Name:" HorizontalAlignment="Left" Height="30" Margin="14,98,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label x:Name="label_Department" Content="Department:" HorizontalAlignment="Left" Height="30" Margin="25,126,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label x:Name="label_Pasport" Content="Passport:" HorizontalAlignment="Left" Height="31" Margin="50,180,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label x:Name="label_Telephone" Content="Telephone:" HorizontalAlignment="Left" Height="30" Margin="37,153,0,0" VerticalAlignment="Top" Width="91"/>
+        <TextBox x:Name="Box_ID"  Text="{Binding ID}" Height="23" Margin="134,15,151,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label x:Name="label_ID" Content="ID:" HorizontalAlignment="Left" Height="30" Margin="90,10,0,0" VerticalAlignment="Top" Width="49"/>
+    </Grid>
+</Window>

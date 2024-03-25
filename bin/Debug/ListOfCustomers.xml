@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Clients>
+  <Client>
+    <ID>2</ID>
+    <First_Name>Ivan</First_Name>
+    <Second_Name>Petrov</Second_Name>
+    <Middle_Name>Sidorovich</Middle_Name>
+    <Pasport>4578124565</Pasport>
+    <Telephone>+79150145689</Telephone>
+    <Department>3</Department>
+  </Client>
+  <Client>
+    <ID>3</ID>
+    <First_Name>Lobanova</First_Name>
+    <Second_Name>Nataliya</Second_Name>
+    <Middle_Name>Fedorovna</Middle_Name>
+    <Pasport>45781245</Pasport>
+    <Telephone>+79295639874</Telephone>
+    <Department>3</Department>
+  </Client>
+  <Client>
+    <ID>4</ID>
+    <First_Name>Oleg</First_Name>
+    <Second_Name>Kovalev</Second_Name>
+    <Middle_Name>Borisovich</Middle_Name>
+    <Pasport>460789345</Pasport>
+    <Telephone>+79295638918</Telephone>
+    <Department>1</Department>
+  </Client>
+</Clients>

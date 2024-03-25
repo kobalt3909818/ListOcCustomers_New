@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Accounts>
+  <Account>
+    <ID>2</ID>
+    <Number>4607 8375 2751 7109</Number>
+    <ID>17</ID>
+    <TypeOfAccount>DepositAccount</TypeOfAccount>
+    <Rate>17</Rate>
+    <Ammount>0</Ammount>
+    <CustomerID>2</CustomerID>
+    <DateOpen>18.03.2024 8:29:42</DateOpen>
+    <DateClose>18.03.2024 0:00:00</DateClose>
+  </Account>
+  <Account>
+    <ID>3</ID>
+    <Number>4607 8375 2751 8514</Number>
+    <ID>17</ID>
+    <TypeOfAccount>DepositAccount</TypeOfAccount>
+    <Rate>17</Rate>
+    <Ammount></Ammount>
+    <CustomerID>2</CustomerID>
+    <DateOpen>18.03.2024 8:33:22</DateOpen>
+    <DateClose></DateClose>
+  </Account>
+  <Account>
+    <ID>4</ID>
+    <Number>4607 8375 2751 8681</Number>
+    <ID>12</ID>
+    <TypeOfAccount>DepositAccount</TypeOfAccount>
+    <Rate>12</Rate>
+    <Ammount />
+    <CustomerID>2</CustomerID>
+    <DateOpen>24.03.2024 8:25:52</DateOpen>
+    <DateClose />
+  </Account>
+  <Account>
+    <ID>5</ID>
+    <Number>4607 8375 2962 8022</Number>
+    <ID>10</ID>
+    <TypeOfAccount>NotDepositAccount</TypeOfAccount>
+    <Rate>10</Rate>
+    <Ammount />
+    <CustomerID>2</CustomerID>
+    <DateOpen>24.03.2024 8:26:07</DateOpen>
+    <DateClose />
+  </Account>
+</Accounts>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="ListOfCustomers_New.Views.Form_Transfer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListOfCustomers_New.Views"
+        mc:Ignorable="d"
+        Title="Form_Transfer" Height="450" Width="800" Background="#FFB8E7F9"
+        Name="TransfersWindow">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" x:Name="ListOfTransfers" ItemsSource="{Binding ListOfTransfers}" Margin="20,33,10,20">
+            <DataGrid.Columns >
+                <DataGridTextColumn  Header="ID" Binding="{Binding ID}" Width="100"  />
+                <DataGridTextColumn  Header="Number" Binding="{Binding Number}" Width="200"  />
+                <DataGridTextColumn  Header="Customer ID" Binding="{Binding CustomerID}" Width="100" />
+                <DataGridTextColumn  Header="Account ID" Binding="{Binding AccountID}" Width="100" />
+                <DataGridTemplateColumn Header="Actions">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <StackPanel Orientation="Horizontal">
+                                <Button Command="{Binding DataContext.ViewTransferCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}" 
+                                 CommandParameter="{Binding}"
+                                 Content="View transfer" Margin="5" Width="85" Height="25"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns >
+
+        </DataGrid>
+        <Button x:Name="add_button" Command="{Binding AddTransferCommand}"  CommandParameter="{x:Reference Name=TransfersWindow}" Content="+ Add" Margin="0,8,10,0" VerticalAlignment="Top" Height="20" Grid.Column="2" HorizontalAlignment="Right" Width="75" Background="White" />
+    </Grid>
+</Window>
